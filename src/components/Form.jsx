@@ -1,10 +1,16 @@
 import React from "react";
 import { states, majorCities } from "../../constants";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
+  const navigate = useNavigate();
+  const handlesubmit = () =>{
+    navigate("/retailer")
+  }
+
   return (
     <div>
-      <form className="w-full h-96 max-w-lg flex flex-col justify-between items-center">
+      <form className="w-full h-96 max-w-lg flex flex-col justify-between items-center" onSubmit={handlesubmit}>
         <div className="flex flex-wrap -mx-3 mb-2">
           <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
             <label
@@ -76,7 +82,7 @@ const Form = () => {
           </div>
         </div>
         <div className="w-full flex justify-end items-center">
-          <button className="text-white hover:text-white border border-white hover:bg-blue-800 hover:border-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+          <button type="submit" className="text-white hover:text-white border border-white hover:bg-blue-800 hover:border-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
             Check availability
           </button>
         </div>

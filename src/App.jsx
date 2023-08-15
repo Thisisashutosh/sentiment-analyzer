@@ -1,18 +1,16 @@
 import React from "react";
-import Form from "./components/Form";
-import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Retailer from "./pages/Retailer";
 
 const App = () => {
   return (
-    <div className="h-screen flex items-center justify-center">
-      <Navbar />
-      <div className="flex justify-around items-center w-full gap-10">
-        <Form />
-        <div>
-          <img src="./src/assets/homepage.svg" alt="image" className="w-full h-96 rounded-md" />
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/retailer" element={<Retailer/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
