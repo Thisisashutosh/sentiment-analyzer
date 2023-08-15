@@ -15,8 +15,8 @@ const Navbar = () => {
         </div>
         <div className="flex items-center justify-between gap-5">
           <ul className="md:flex pl-9 md:p1-0">
-            {Links.map((link) => (
-              <li className="font-semibold text-white my-7 md:my-0 md:ml-8 ">
+            {Links.map((link,index) => (
+              <li className="font-semibold text-white my-7 md:my-0 md:ml-8 " key={index}>
                 <a href="/">{link.name}</a>
               </li>
             ))}
