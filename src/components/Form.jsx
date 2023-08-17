@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Form = () => {
   const navigate = useNavigate();
   const handlesubmit = () =>{
-    navigate("/retailer")
+    navigate("/analyzer/retailer")
   }
 
   return (
